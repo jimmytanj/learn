@@ -14,5 +14,5 @@ app = src.map(lambda x: json.loads(x))
 app.add_sink(StreamingFileSink
              .for_row_format('/tmp/output', SimpleStringEncoder())
              .build())
-
+##
 s_env.execute("test")
